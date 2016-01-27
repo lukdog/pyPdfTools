@@ -1,9 +1,16 @@
 # pyPdfTools
 tools to manage PDF files easily
 
-### pdfMerger
+#### Install module pyPDF2
 
-This tool merge multiple PDF files in a single one:
+pyPDFTools use a library to manage single PDF files, you can download this library here: [pyPDF2](https://pypi.python.org/pypi/PyPDF2) 
+
+Then you can install pyPDF2 module with command: ``python setup.py install``
+
+## Available tools
+
+### pdfMerger
+This tool merge multiple PDF files in a single one with different options
 
 ```
 usage: pdfMerger [-h] [-s | -a] [-o OUTPUT] [-r i [i ...]] [-q | -v]
@@ -29,11 +36,14 @@ optional arguments:
 ```
 
 ###### Example:
+
 If you have to **scan** a document composed by a lot of sheet you can scan first the _odd pages_, after that you can _turn paper block_ and scan the _even pages_ in **reverse** order, with this tool you can simply **merge odd and even pages** in final document in this way:
 
 ```bash
 pdfMerger -q -r 0 -o final.pdf -a odd.pdf even.pdf
 ```
+> this example is situation that lead me to develop this tools. Yes i know, there are a lot of similar tools for all os, but i wanted something that was really customizable and light
+
 ###### Using it in python Project
 
 ```python
