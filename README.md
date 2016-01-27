@@ -34,7 +34,7 @@ If you have to **scan** a document composed by a lot of sheet you can scan first
 ```bash
 pdfMerger -q -r 0 -o final.pdf -a odd.pdf even.pdf
 ```
-###### Use in python Project
+###### Using it in python Project
 
 ```python
 from pdfMerger import PdfMerger
