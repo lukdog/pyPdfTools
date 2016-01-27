@@ -31,5 +31,5 @@ optional arguments:
 For Example if you have to scan a document composed by a lot of sheet you can scan first the odd pages, after that you can turn paper block and scan the even pages in reverse order, with this tool you can simply merge odd and even pages in final document in this way:
 
 ```bash
-pdfMerger -q -a -r 0 odd.pdf even.pdf
+pdfMerger -q -r 0 -o final.pdf -a odd.pdf even.pdf
 ```
